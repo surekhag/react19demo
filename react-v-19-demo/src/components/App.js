@@ -19,6 +19,9 @@ const AppNavigation = () => (
       <NavLink to="/contact" activeClassName="active">
         Contact
       </NavLink>
+      <NavLink to="/dashboard" activeClassName="active">
+      Dashboard
+      </NavLink>
     </nav>
     <Routes>
       <Route path="/" element={<Home />} />
