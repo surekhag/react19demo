@@ -22,7 +22,13 @@ const Dashboard = () => {
 }
 
 const Project = () => <h1>Project Page</h1>;
-const RecentActivity = () => <h1>RecentActivity Page</h1>;
+const RecentActivity = () => {
+  return <>
+  <h1>RecentActivity Before</h1>;
+   <Link to="project/2">Project</Link>
+   <h1>RecentActivity After</h1>;
+  </>
+}
 
 const AppNavigation = () => (
   <BrowserRouter>
@@ -43,7 +49,7 @@ const AppNavigation = () => (
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
 
-      <Route path="dashboard" element={<Dashboard />}>
+      <Route path="/dashboard" element={<Dashboard />}>
         <Route index element={<RecentActivity />} />
         <Route path="project/:id" element={<Project />} />
       </Route>
