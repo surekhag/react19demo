@@ -1,11 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  NavLink,
+  Outlet,
+} from "react-router-dom";
 
 const Home = () => <h1>Home Page</h1>;
 const About = () => <h1>About Page</h1>;
 const Contact = () => <h1>Contact Page</h1>;
-const Dashboard = () => <h1>Dashboard Page</h1>;
+const Dashboard = () => {
+  return (
+    <>
+      <h1>Dashboard Page</h1>
+      <Outlet />
+    </>
+  )
+}
+
 const Project = () => <h1>Project Page</h1>;
 const RecentActivity = () => <h1>RecentActivity Page</h1>;
 
@@ -20,7 +35,7 @@ const AppNavigation = () => (
         Contact
       </NavLink>
       <NavLink to="/dashboard" activeClassName="active">
-      Dashboard
+        Dashboard
       </NavLink>
     </nav>
     <Routes>
