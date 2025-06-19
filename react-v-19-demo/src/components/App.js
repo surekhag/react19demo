@@ -17,18 +17,19 @@ const Dashboard = () => {
     <>
       <h1>Dashboard Page</h1>
       <Outlet />
+      <h1>After outlet text</h1>
     </>
-  )
-}
+  );
+};
 
 const Project = () => <h1>Project Page</h1>;
 const RecentActivity = () => {
-  return <>
-  <h1>RecentActivity Before</h1>;
-   <Link to="project/2">Project</Link>
-   <h1>RecentActivity After</h1>;
-  </>
-}
+  return (
+    <>
+      <h1>RecentActivity Before</h1>;<Link to="project/2">Project</Link>
+    </>
+  );
+};
 
 const AppNavigation = () => (
   <BrowserRouter>
